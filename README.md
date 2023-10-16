@@ -3,8 +3,8 @@
 Battleship game for pp3  project. 
 Start making my very first pyton project. simple battleship game.
 
-1. Table
-For first step i creat the table, wich is a 10x10 grid, and add the function to write the hit,miss,and comp on the table.
+   
+1. For first step i creat the table, wich is a 10x10 grid, and add the function to write the hit,miss,and comp on the table.
 
 
 2. Creat a function for the user
@@ -24,5 +24,7 @@ For first step i creat the table, wich is a 10x10 grid, and add the function to 
 
 ![random ships created](pictures/Untitled.jpg)
 
-5. our ships is a  lists of list.
-6. The shot will be added to the list of misses if it hasn't hit any of the ships.
+5. Our ships is a  lists of list.
+   The shot will be added to the list of misses if it hasn't hit any of the ships.
+
+6. Tactics added to the game. (followed by youtube totorials : (https://www.youtube.com/watch?v=LbALFZoRrw8) )

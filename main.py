@@ -1,3 +1,5 @@
+import ships
+
 # User interface , ask user for a nr.
 
 def get_shot(guesses):
@@ -53,6 +55,7 @@ def check_shot(shot,boat1,boat2,hit,miss,comp):
             hit.append(shot)
         else:
             comp.append(shot)
+    
     elif shot in boat2:
         boat2.remove(shot)
         if len(boat2) > 0:
@@ -60,15 +63,15 @@ def check_shot(shot,boat1,boat2,hit,miss,comp):
         else:
             comp.append(shot)
     else:
-        miss.append(shot)   
+        miss.append(shot)     
 
     return boat1,boat2,hit,miss,comp
 
 
-
-
 boat1 = [45,46,47]
 boat2 = [6,16,26]
+
+
 hit = []
 miss = []
 comp = []
