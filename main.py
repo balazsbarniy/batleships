@@ -1,3 +1,4 @@
+# User interface , ask user for a nr.
 
 def get_shot(guesses):
 
@@ -9,7 +10,7 @@ def get_shot(guesses):
             if shot < 0 or shot > 99:
                 print("please type a nr between 0/99")
             elif shot in guesses :
-                print("incorrect !!  please try again ! ")
+                print("Already in use !!  please try again ! ")
             else:
                 ok = "y"
                 break
@@ -17,7 +18,9 @@ def get_shot(guesses):
             print("incorrect !!  please try again ! ")
     return shot
 
-def show_board(hit,miss,comp):
+# Table and function for hit, miss, and comp
+
+def show_board(hit,miss,comp):                      
     print("            battleships    ")
     print()
     print("     0  1  2  3  4  5  6  7  8  9")
@@ -40,8 +43,9 @@ def show_board(hit,miss,comp):
         print(x," ",row)
 
 
+# Check if user answer hit mis or comp. "check shot"
 
-def check_shot(shot,boat1,hit,miss,comp):
+def check_shot(shot,boat1,boat2,hit,miss,comp):
 
     if shot in boat1:
         boat1.remove(shot)
@@ -49,15 +53,22 @@ def check_shot(shot,boat1,hit,miss,comp):
             hit.append(shot)
         else:
             comp.append(shot)
+    elif shot in boat2:
+        boat2.remove(shot)
+        if len(boat2) > 0:
+            hit.append(shot)
+        else:
+            comp.append(shot)
     else:
-        miss.append(shot)
+        miss.append(shot)   
 
-    return boat1,hit,miss,comp
+    return boat1,boat2,hit,miss,comp
 
 
 
 
 boat1 = [45,46,47]
+boat2 = [6,16,26]
 hit = []
 miss = []
 comp = []
@@ -65,5 +76,10 @@ comp = []
 for i in range(10):
     guesses = hit + miss + comp
     shot = get_shot(guesses)
-    boat1,hit,miss,comp = check_shot(shot,boat1,hit,miss,comp)
+    boat1,boat2,hit,miss,comp = check_shot(shot,boat1,boat2,hit,miss,comp)
     show_board(hit,miss,comp)
+
+    if len(boat1) < 1 and len(boat2) <1:
+        print("you win ")
+        break
+print("Finishd")
