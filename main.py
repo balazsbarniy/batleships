@@ -69,15 +69,15 @@ def check_shot(shot,boat1,boat2,hit,miss,comp):
     return boat1,boat2,hit,miss,comp
 
 
-boat1 = [random in range(3)]
-boat2 = [6,16,26]
+boat1 = [46,47,48,]
+boat2 = [22,23,24,25]
 
 
 hit = []
 miss = []
 comp = []
 
-for i in range(20):
+for i in range(100):
     guesses = hit + miss + comp
     shot = get_shot(guesses)
     boat1,boat2,hit,miss,comp = check_shot(shot,boat1,boat2,hit,miss,comp)
