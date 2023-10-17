@@ -22,7 +22,7 @@ Start making my very first pyton project. simple battleship game.
      have to be separete if we have mor then  one ship, we dont use the same location for them,not crossing each other. -->
    - Creat on other list, "taken". add to chek_ok and to check_boat. 
 
-![random ships created](pictures/Untitled.jpg)
+![random ships created](../pictures/random_ship_created.jpg)
 
 5. - Our ships is a  lists of list.
    - The shot will be added to the list of misses if it hasn't hit any of the ships.
