@@ -1,4 +1,5 @@
 import ships
+import random
 
 # User interface , ask user for a nr.
 
@@ -68,7 +69,7 @@ def check_shot(shot,boat1,boat2,hit,miss,comp):
     return boat1,boat2,hit,miss,comp
 
 
-boat1 = [45,46,47]
+boat1 = [random in range(3)]
 boat2 = [6,16,26]
 
 
@@ -76,7 +77,7 @@ hit = []
 miss = []
 comp = []
 
-for i in range(10):
+for i in range(20):
     guesses = hit + miss + comp
     shot = get_shot(guesses)
     boat1,boat2,hit,miss,comp = check_shot(shot,boat1,boat2,hit,miss,comp)
